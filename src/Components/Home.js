@@ -2,6 +2,7 @@ import React from 'react';
 import {Hero} from "./Hero";
 import {Banner} from "./Banner";
 import {NavLink} from "react-router-dom";
+import {Services} from "./Services";
 
 export const Home = () => {
     return (
@@ -13,6 +14,7 @@ export const Home = () => {
                     </NavLink>
                 </Banner>
             </Hero>
+            <Services/>
         </div>
     )
 }

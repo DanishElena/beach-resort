@@ -1,26 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Fragment} from 'react';
+import styles from "./App.css";
+import {Home} from "./Components/Home";
+import {Room} from "./Components/Room";
+import {SingleRoom} from "./Components/SingleRoom";
+import {Route, Switch} from "react-router-dom";
+import {Navbar} from "./Components/Navbar";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <Navbar/>
+        <Switch>
+        <Route exact path="/"  component={Home} />
+        <Route path="/rooms/"component={Room} />
+        <Route path="/rooms/:single"component={SingleRoom} />
+        </Switch>
+    </>
   );
 }
 
 export default App;
+/*<Route component={Error}/>*/

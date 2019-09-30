@@ -2,9 +2,12 @@ import React from 'react';
 import {Hero} from "./Hero";
 import {Banner} from "./Banner";
 import {NavLink} from "react-router-dom";
+import RoomContainer from "./RoomContainer";
+
 
 export const Room = () => {
     return (
+        <>
         <div>
             <Hero hero="roomsHero">
                 <Banner title="our rooms">
@@ -14,6 +17,8 @@ export const Room = () => {
                 </Banner>
             </Hero>
         </div>
+            <RoomContainer/>
+            </>
     )
 }
 

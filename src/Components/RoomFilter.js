@@ -36,6 +36,8 @@ export const RoomFilter = ({context}) => {
         return <option key={index} value={item}>{item}</option>
     })
 
+
+
 return (
     <section className="filter-container">
         <Title title="search rooms"/>
@@ -59,6 +61,18 @@ return (
                         onChange={handleChange}>
                     {people}
                 </select>
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="price">room price ${price}</label>
+              <input type="range"
+                     name="price"
+                     min = {minPrice}
+                     max={maxPrice}
+                     id="price"
+                     value={price}
+                     onChange={handleChange}
+                     className="form-control"/>
             </div>
 
         </form>

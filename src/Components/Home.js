@@ -3,6 +3,8 @@ import {Hero} from "./Hero";
 import {Banner} from "./Banner";
 import {NavLink} from "react-router-dom";
 import {Services} from "./Services";
+import FeaturedRooms from "./FeaturedRooms";
+
 
 export const Home = () => {
     return (
@@ -15,6 +17,8 @@ export const Home = () => {
                 </Banner>
             </Hero>
             <Services/>
+            <FeaturedRooms />
+
         </div>
     )
 }

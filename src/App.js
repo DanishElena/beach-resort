@@ -1,5 +1,4 @@
-import React, {Fragment} from 'react';
-import styles from "./App.css";
+import React from 'react';
 import {Home} from "./Components/Home";
 import {Room} from "./Components/Room";
 import {SingleRoom} from "./Components/SingleRoom";
@@ -13,8 +12,8 @@ function App() {
         <Navbar/>
         <Switch>
         <Route exact path="/"  component={Home} />
-        <Route path="/rooms/"component={Room} />
-        <Route path="/rooms/:single"component={SingleRoom} />
+        <Route exact path="/rooms/"component={Room} />
+        <Route exact path="/rooms/:slug"component={SingleRoom} />
         </Switch>
     </>
   );

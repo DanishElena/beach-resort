@@ -5,14 +5,15 @@ import {Loading} from "./Loading";
 import {withRoomConsumer} from "../Context";
 
 const RoomContainer = ({context}) => {
-    const {loading, sortedRooms, rooms} = context
+//    console.log(context)
+    const {loading, sortedRooms} = context
+
     if (loading) {
         return <Loading/>
     }
     return (
         <>
-            Hello
-            <RoomFilter rooms={rooms}/>
+            <RoomFilter context={context}/>
             <RoomList rooms={sortedRooms}/>
         </>
     )

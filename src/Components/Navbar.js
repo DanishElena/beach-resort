@@ -17,7 +17,7 @@ export class Navbar extends React.Component {
     render() {
         return (
             <nav className="navbar">
-                <div className="navbar-center">
+                <div className="nav-center">
                     <div className="nav-header">
                         <NavLink to="/">
                             <img src={logo} alt="beach resort"/>
